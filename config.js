@@ -6,10 +6,11 @@ module.exports = {
 		// parseOptions: { wrapUnions: true }
 	},
 	avroLogLevel: "info",
-	kafkaConfig: {
+	kafkaConfigurations: {
 		dr_cb: true,
 		debug: "all",
 		"metadata.broker.list": "172.16.27.78:9092"
 	},
+	kafkaPollInterval: 3000,
 	topicName: "avrotest"
 };
