@@ -19,3 +19,9 @@ npm install kafka-avro-nodejs --save
 - Please refer [producer.js](https://github.com/psalot/kafkaAvroPoc/blob/master/producer.js) and [consumer.js](https://github.com/psalot/kafkaAvroPoc/blob/master/consumer.js) to use this module
 - Provide all configurations in config.js as shown
 - Please make sure schemas are created in the schema registry first
+
+### Sample schema registration commands
+
+- curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" --data '{"schema": "{\"type\": \"record\", \"name\": \"avrotest_value\", \"fields\": [{\"type\": \"string\", \"name\": \"id\"},{\"type\": \"string\", \"name\": \"name\",\"default\": \"na\"}]}"}' http://localhost:8081/subjects/avrotest-value/versions
+
+- curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" --data '{"schema": "{\"type\": \"record\", \"name\": \"avrotest_value\", \"fields\": [{\"type\": \"string\", \"name\": \"id\"},{\"type\": \"string\", \"name\": \"name\",\"default\": \"na\"}]}"}' http://schema-registry:8081/subjects/avrotest-key/versions
