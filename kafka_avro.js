@@ -48,9 +48,8 @@ class Avro {
 			kafkaAvro
 				.getProducer(connectionConfig.kafkaConfigurations)
 				.then(function(producerData) {
-					producer = producerData;
 					console.log("Producer Connected");
-					resolve(producer);
+					resolve(producerData);
 				})
 				.catch(err => {
 					// console.log(err, "catch first");
