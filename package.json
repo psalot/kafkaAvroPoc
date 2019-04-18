@@ -1,23 +1,23 @@
 {
-  "name": "kafkapoc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/psalot/kafkaAvroPoc.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/psalot/kafkaAvroPoc/issues"
-  },
-  "homepage": "https://github.com/psalot/kafkaAvroPoc#readme",
-  "dependencies": {
-    "bunyan-format": "^0.2.1",
-    "kafka-avro": "^1.2.0"
-  }
+	"name": "kafka-avro-nodejs",
+	"version": "1.0.0",
+	"description": "Node.js implementation for kafka-avro",
+	"main": "kafka_avro.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/psalot/kafkaAvroPoc.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/psalot/kafkaAvroPoc/issues"
+	},
+	"homepage": "https://github.com/psalot/kafkaAvroPoc#readme",
+	"dependencies": {
+		"bunyan-format": "^0.2.1",
+		"kafka-avro": "^1.2.0"
+	}
 }

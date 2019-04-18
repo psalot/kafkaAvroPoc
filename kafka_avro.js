@@ -1,12 +1,5 @@
 const KafkaAvro = require("kafka-avro");
-// const connectionConfig = require("./connectionConfig");
 
-// console.log(KafkaAvro.CODES);
-
-// Query the Schema Registry for all topic-schema's
-// fetch them and evaluate them.
-
-let producer;
 class Avro {
 	constructor(connectionConfig, logEnable = 1) {
 		if (!connectionConfig) {
