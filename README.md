@@ -9,7 +9,7 @@ The kafka-avro-nodejs library is a wrapper that combines the [kafka-avro][kafka-
 Install the module using NPM:
 
 ```
-npm install kafka-avro --save
+npm install kafka-avro-nodejs --save
 ```
 
 ### Implementation
