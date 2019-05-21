@@ -1,6 +1,6 @@
 const config = require("./config");
 const KafkaAvro = require("./kafka_avro");
-const Avro = new KafkaAvro(config);
+const Avro = new KafkaAvro(config, "producer");
 
 Avro.then(avroObj => {
 	const producerObj = avroObj.producer;
@@ -11,14 +11,14 @@ Avro.then(avroObj => {
 		console.log(err, "producer error");
 	});
 	producerObj.on("event.log", function(log) {
-		console.log("producer log:", log);
+		// console.log("producer log:", log);
 	});
 
 	producerObj.on("error", function(err) {
 		console.log("Error from producer:", err);
 	});
 
-	const messageData = { id: Math.random().toString(), name: "Test" };
+	const messageData = { idno: Math.random().toString(), name1: "Test" };
 	const key = { id: Math.random().toString() };
 	//uncomment below lines if you want delivery reports
 	// setInterval(() => {

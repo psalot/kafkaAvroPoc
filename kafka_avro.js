@@ -1,7 +1,7 @@
 const KafkaAvro = require("kafka-avro");
 
 class Avro {
-	constructor(connectionConfig, logEnable = 1) {
+	constructor(connectionConfig, producerOrConsumer, logEnable = 1) {
 		if (!connectionConfig) {
 			throw new Error(
 				`'Connection config' is either missing or not in the specified format`
@@ -25,16 +25,31 @@ class Avro {
 			kafkaAvro
 				.init()
 				.then(async function() {
-					const producer = await thisObj.startProducer(
-						kafkaAvro,
-						connectionConfig
-					);
-					const consumer = await thisObj.startConsumer(
-						kafkaAvro,
-						connectionConfig
-					);
+					if (producerOrConsumer == "producer") {
+						const producer = await thisObj.startProducer(
+							kafkaAvro,
+							connectionConfig
+						);
+						resolve({ producer: producer });
+					} else if (producerOrConsumer == "consumer") {
+						const consumer = await thisObj.startConsumer(
+							kafkaAvro,
+							connectionConfig
+						);
+						resolve({ consumer: consumer });
+					} else {
+						const producer = await thisObj.startProducer(
+							kafkaAvro,
+							connectionConfig
+						);
+						const consumer = await thisObj.startConsumer(
+							kafkaAvro,
+							connectionConfig
+						);
+
+						resolve({ producer: producer, consumer: consumer });
+					}
 					// console.log(consumer, "resolve");
-					resolve({ producer: producer, consumer: consumer });
 				})
 				.catch(err => {
 					// console.log(err, "catch second");

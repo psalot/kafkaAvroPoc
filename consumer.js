@@ -1,6 +1,6 @@
 const config = require("./config");
 const KafkaAvro = require("./kafka_avro");
-const Avro = new KafkaAvro(config);
+const Avro = new KafkaAvro(config, "consumer");
 
 Avro.then(avroObj => {
 	const consumer = avroObj.consumer;
