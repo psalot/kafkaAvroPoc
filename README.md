@@ -30,7 +30,7 @@ npm install kafka-avro-nodejs --save
 
 - curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" --data '{"schema": "{\"type\": \"record\", \"name\": \"avrotest_value\", \"fields\": [{\"type\": \"string\", \"name\": \"id\"},{\"type\": \"string\", \"name\": \"name\",\"default\": \"na\"}]}"}' http://localhost:8081/subjects/avrotest-value/versions
 
-- curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" --data '{"schema": "{\"type\": \"record\", \"name\": \"avrotest_value\", \"fields\": [{\"type\": \"string\", \"name\": \"id\"},{\"type\": \"string\", \"name\": \"name\",\"default\": \"na\"}]}"}' http://schema-registry:8081/subjects/avrotest-key/versions
+- curl -X POST -H "Content-Type: application/vnd.schemaregistry.v1+json" --data '{"schema": "{\"type\": \"record\", \"name\": \"avrotest_value\", \"fields\": [{\"type\": \"string\", \"name\": \"id\"},{\"type\": \"string\", \"name\": \"name\",\"default\": \"na\"}]}"}' http://localhost:8081/subjects/avrotest-key/versions
 
 ### Tools useful to create 
 
