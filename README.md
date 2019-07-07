@@ -37,3 +37,4 @@ npm install --registry http://npm-registry.accionbreeze.com kafka-avro-nodejs --
 - You can use this tool to convert your json schema to avro schema http://avro4s-ui.landoop.com/
 - You can use this to beautify and minify json https://codebeautify.org/jsonviewer
 - you can use this to escape and unescape minified string https://www.freeformatter.com/javascript-escape.html
+- you can use this to beautify, minify, escape and unescape json https://extendsclass.com/json-validator.html
